@@ -166,6 +166,7 @@ h6,
 /*** Navbar Start ***/
 .navbar {
     border-bottom: 1px solid rgba(255, 255, 255, .1);
+    transition: top 0.3s ease-in-out;
 }
 
 .navbar .navbar-nav .nav-link {
@@ -223,7 +224,28 @@ h6,
 #searchModal .modal-content {
     background: rgba(255, 255, 255, .8);
 }
+
+/*** Scroll Hide Topbar ***/
+.topbar {
+    transition: transform 0.3s ease-in-out;
+}
+
+.topbar-hidden {
+    transform: translateY(-100%);
+}
+
+/*** Stick Navbar After Topbar Hides ***/
+.navbar-fixed {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1030;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    background-color: var(--bs-light);
+}
 /*** Navbar End ***/
+
 
 
 /*** Hero Header ***/
